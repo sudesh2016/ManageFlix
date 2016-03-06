@@ -1,0 +1,7 @@
+node_modules/
+uploads/
+server/client/src/bower_components/
+server/client/build/
+server/client/src/assests
+server/config.js
+.DS_Store

@@ -1,0 +1,43 @@
+<div class="close">
+  <span class="close__icon" ng-click="close()">X</span>
+</div>
+<div class="feed comments">
+  <div class="feed-card feed-card__comments">
+    <div class="show-image">
+      <img ng-src="{{showToComment.imgsrc}}" class="show-image">
+    </div>
+    <div class="show-info">
+      <div class="show-title">
+        {{showToComment.title}}
+      </div>
+      <div class="show-description">
+        {{showToComment.description}}
+      </div>
+      <div class="shows-on">
+        <div ng-repeat="available in showToComment.availableDisplay" class="shows-on__available">
+          <img ng-src="{{available}}" class="show-available">
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="comments__area">
+    <div class="comments__area__discuss">Discuss</div>
+    <div class="comments__editable">
+      <div id="plainText" contenteditable="true" class="review__text" ng-click="removeInnerText()">Leave your comments or reviews for this show ...</div>
+    </div>
+  </div>
+  <div class="comments__area__save__wrapper">
+ <span class="flix__button comments__area__save" ng-click="post()">Post as {{username}}</span>
+ </div>
+ <div class="comments__single__comment" ng-repeat="comment in comments">
+     <img ng-src="{{img}}" class="comments__image">
+     <div>
+       <div class="comments_user_edit_title">
+       <div class="comments__user__title">{{comment.comment.creator.username}}</div>
+        <div ng-if="!editON"> <i class="fa fa-pencil-square-o comments__user__edit" ng-click="edit($index)">	&nbsp;edit</i> </div>
+        <div ng-if="editON" class="edit__save"><i class="fa fa-floppy-o" ng-click="save($index)">	&nbsp;save</i></div>
+      </div>
+       <div id="editComment{{$index}}" class="comments__single__comment__comment">{{comment.comment.text}}</div>
+    </div>
+ </div>
+</div>

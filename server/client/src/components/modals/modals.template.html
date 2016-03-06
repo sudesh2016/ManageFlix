@@ -1,0 +1,13 @@
+<div id="modal" bn-modals ng-show="subview" class="m-modals" ng-switch="subview">
+
+  <!-- BEGIN: Prompt Modal. -->
+  <div ng-switch-when="comment" ng-controller="CommentCtrl">
+    <ng-include src="'components/comments/comments.html'"> </ng-include>
+  </div>
+
+  <!-- BEGIN: Prompt Modal. -->
+  <div ng-switch-when="shows" ng-controller="ShowsCtrl">
+    <ng-include src="'components/shows/shows.html'"> </ng-include>
+  </div>
+
+</div>

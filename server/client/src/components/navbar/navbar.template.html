@@ -1,0 +1,25 @@
+<div class="navbar" ng-if="loggedIn">
+  <div id="feed" class="logo" ng-click="goto('feed')">
+    Home
+  </div>
+  <div class="search-bar">
+  </div>
+  <div class="profile">
+    <div class="add-shows" ng-click="getShows()">
+     <i id="shows" class="fa fa-television">&nbsp;My Shows</i>
+    </div>
+      <div
+          dropdown-menu="ddSelectOptions"
+          dropdown-model="ddSelectSelected"
+          dropdown-item-label="text"
+          dropdown-onchange="logout(selected)"
+          class="dropdown-flex">
+          <div  id="profile-info" class="profile-info">
+            <img ng-src="{{img}}" class="profile-image">
+            <div class="profile-name">
+              @{{username}}
+            </div>
+      </div>
+    </div>
+  </div>
+</div>

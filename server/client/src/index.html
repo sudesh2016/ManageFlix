@@ -1,0 +1,53 @@
+<!doctype html>
+<html ng-app="Hisbiscus">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title></title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="./bower_components/angular-dropdowns/angular-dropdowns.css"/>
+  <link rel="stylesheet/less" type="text/css"  href="./styles/styles.less"/>
+</head>
+<body>
+
+<div>
+<navbar></navbar>
+</div>
+<div ng-view  ng-animate></div>
+
+<!-- External Libraries -->
+<script src="./bower_components/less/dist/less.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.9/angular.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.9/angular-animate.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.9/angular-route.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/lodash.js/4.5.1/lodash.min.js"></script>
+
+<script src="./bower_components/ng-file-upload/ng-file-upload.js"></script>
+<script src="./bower_components/angular-dropdowns/angular-dropdowns.js"></script>
+<script src="./bower_components/satellizer/satellizer.js"></script>
+
+<script src="app.js"></script>
+
+<!-- Services -->
+<script src="./services/api.service.js"></script>
+<script src="./services/utility.service.js"></script>
+
+<!-- Constants -->
+<script src="./constants/urls.constants.js"></script>
+<script src="./constants/events.constants.js"></script>
+
+<!-- Components -->
+<script src="./components/modals/modal.directive.js"></script>
+<script src="./components/modals/modal.service.js"></script>
+<script src="./components/navbar/navbar.directive.js"></script>
+<script src="./components/navbar/navbar.controller.js"></script>
+<script src="./components/profile/profile.controller.js"></script>
+<script src="./components/profile/profile.modal.controller.js"></script>
+<script src="./components/shows/shows.controller.js"></script>
+<script src="./components/feed/feed.controller.js"></script>
+<script src="./components/comments/comments.controller.js"></script>
+<script src="./components/login/login.controller.js"></script>
+
+</body>
+</html>

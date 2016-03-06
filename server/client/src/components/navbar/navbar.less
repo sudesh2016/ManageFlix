@@ -1,0 +1,121 @@
+@import "../../styles/inputborder";
+.navbar {
+  display: flex;
+  width: 99%;
+  flex-direction: row;
+  outline: 0;
+  padding-bottom: 5px;
+  border-style: solid;
+  border-width: 1px;
+  border-color: white;
+  border-bottom-color: rgba(128, 128, 128, 0.34);
+  justify-content: space-between;
+  .logo {
+    margin-top: 5px;
+    padding: 5px;
+    border-radius: 3px;
+    cursor: pointer;
+    margin-left: 25px;
+    padding-left: 10px;
+    padding-right: 10px;
+    &:hover {
+      background-color: rgba(128, 128, 128, 0.2);
+    }
+  }
+  .search-bar {
+    display: flex;
+    padding-top: 8px;
+    .search {
+      width: 400px;
+      margin-right: 5px;
+      outline: 0;
+      height: 20px;
+    }
+    .search-button {
+      border-color: rgba(15, 15, 15, 0.31);
+      border-radius: 3px;
+      border-style: solid;
+      padding-right: 10px;
+      padding-left: 11px;
+      padding-top: 2px;
+      height: 20px;
+      border-width: 1px;
+      margin-bottom: px;
+      font-size: 15px;
+      cursor: pointer;
+      &:hover {
+        border-color: black;
+        background-color: rgba(128, 128, 128, 0.2);
+      }
+    }
+  }
+  .dropdown-flex {
+    display: flex;
+  }
+  .profile {
+    border-radius: 3px;
+    display: flex;
+    cursor: pointer;
+    .profile-info {
+      display: flex;
+      border-radius: 3px;
+      padding-top: 7px;
+      padding-bottom: 5px;
+      padding-right: 10px;
+      padding-left: 10px;
+      .profile-image {
+        border-radius: 50px;
+        width: 25px;
+        height: 25px;
+      }
+      .profile-name {
+        padding-left: 5px;
+        padding-top: 5px;
+      }
+      &:hover {
+        background-color: rgba(128, 128, 128, 0.2);
+      }
+    }
+    .add-shows {
+      padding-top: 10px;
+      padding-bottom: 5px;
+      padding-right: 10px;
+      padding-left: 10px;
+      border-radius: 3px;
+      cursor: pointer;
+      &:hover {
+        background-color: rgba(128, 128, 128, 0.2);
+      }
+    }
+  }
+  .active {
+    font-weight: bold;
+  }
+  .wrap-dd-menu {
+    padding: 0 !important;
+    width: auto !important;
+  }
+}
+.wrap-dd-menu {
+  .dropdown {
+    margin-top: 25px;
+    border-radius: 0;
+    position: absolute;
+    z-index: 1;
+    left: 20px;
+    padding: 5px;
+    box-shadow: 0 0 5px rgba(0,0,0,0.1);
+    font-weight: normal;
+    list-style: none;
+    visibility: hidden;
+    .dropdown-item {
+      color: black;
+      &:hover {
+        background-color: rgba(128, 128, 128, 0.17);
+      }
+    }
+  }
+}
+.wrap-dd-menu .dropdown:before {
+  border-color: white transparent;
+}

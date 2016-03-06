@@ -1,0 +1,24 @@
+<div class="close">
+  <span class="close__icon" ng-click="close()">X</span>
+</div>
+<div class="feed feed__myshows">
+  <div id="card{{$index}}" class="feed-card" ng-repeat="show in myshows">
+    <div class="show-image">
+      <img ng-src="{{show.imgsrc}}" class="show-image">
+    </div>
+    <div class="show-info">
+      <div class="show-title">
+        {{show.title}}
+      </div>
+      <div class="show-description">
+        {{show.description}}
+      </div>
+      <div class="shows-on">
+        Netflix
+      </div>
+    </div>
+  </div>
+    <div class="no-shows" ng-if="myshows.length === 0">
+      You are not watching any shows!
+    </div>
+</div>

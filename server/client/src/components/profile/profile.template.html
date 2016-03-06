@@ -1,0 +1,34 @@
+<div class="main-profile">
+  <div class="main-profile__image">
+    <img ng-src="{{img}}" class="main-profile__imgbox">
+    <span ngf-select="upload($file)"
+      ng-model="file"
+      name="file"
+      ngf-pattern="'image/*'"
+      ngf-accept="'image/*'"
+      ngf-max-size="20MB"
+      ngf-min-height="100"
+      ngf-resize="{width: 100, height: 100}"
+      class="main-profile__update main-profile__update__fileupload">
+      Update Profile Picture
+    </span>
+  </div>
+  <div class="change-password">
+    <div class="username">
+      <div class="username__text">
+        Old password
+      </div>
+      <input type="password" class="input-border profile-input"> </input>
+    </div>
+    <div class="username">
+      <div class="username__text">
+        New password
+      </div>
+      <input type="password" class="input-border profile-input"> </input>
+    </div>
+  </div>
+  <div class="main-profile__image">
+    <div class="main-profile__update" style="margin-top: 5px;">Submit Changes</div>
+  </div>
+</div>
+<simplemodal></simplemodal>

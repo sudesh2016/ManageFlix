@@ -1,0 +1,32 @@
+<div class="feed">
+  <div id="card{{$index}}" class="feed-card" ng-repeat="show in shows">
+    <div class="show-image">
+      <img ng-src="{{show.imgsrc}}" class="show-image">
+    </div>
+    <div class="show-info">
+      <div class="show-title">
+        {{show.title}}
+      </div>
+      <div class="show-description">
+        {{show.description}}
+      </div>
+        <div class="shows-on">
+          <div ng-repeat="available in show.availableDisplay" class="shows-on__available">
+            <img ng-src="{{available}}" class="show-available">
+          </div>
+        </div>
+    </div>
+    <div class="users-stats">
+      <div>
+        <i class="fa fa-comment-o feed__comments" ng-click="getComments($index)">{{show.comments}}</i>
+      </div>
+      <div ng-if="show.myshow">
+        <i id="watch{{$index}}" class="fa fa-television watch__on__click" ng-click="addToWatch($index)">{{show.peoplewatching}}</i>
+      </div>
+      <div ng-if="!show.myshow">
+        <i id="watch{{$index}}" class="fa fa-television watch" ng-click="addToWatch($index)">{{show.peoplewatching}}</i>
+      </div>
+    </div>
+  </div>
+</div>
+<simplemodal></simplemodal>
